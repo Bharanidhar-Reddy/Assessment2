@@ -1,0 +1,49 @@
+<div class="container">
+    <div style="float: right;margin-bottom: 10px"><input type="text" placeholder="Search By Name"></div>
+
+    <div *ngIf="show">
+        <h3>Details of the selected Person</h3>
+        <tbody *ngFor="let ps of p">
+            <tr *ngIf="ps.id == id">
+                <td> {{ps.name}} </td>
+                <td> {{ps.dob}} </td>
+                <td> {{ps.address}} </td>
+                <td> {{ps.phone}} </td>
+            </tr>
+        </tbody>
+        <tbody *ngFor="let es of e">
+            <tr *ngIf="es.id == id">
+                <td> {{es.degree}} </td>
+                <td> {{es.marks}} </td>
+                <td> {{es.stream}} </td>
+                <td> {{es.college}} </td>
+            </tr>
+        </tbody>
+        <button type="button" (click)="ok()" class="btn btn-info">ok</button> 
+    </div>
+
+
+
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody *ngIf="p.length > 0">
+            <tr *ngFor="let ps of p">
+                <th scope="row">{{ps.id}}</th>
+                <td> {{ps.name}} </td>
+                <td> {{ps.dob}} </td>
+                <td> {{ps.phone}} </td>
+                <td> <button type="button" (click)="view(ps)" class="btn btn-info">View Details</button> </td>
+                <td> <button type="button" (click)="delete(ps)" class="btn btn-danger"> Delete </button> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

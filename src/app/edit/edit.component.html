@@ -1,0 +1,66 @@
+<div class="container">
+        <form (ngSubmit)="addData()">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="text-align: center">Personal Details</h3>
+                    <div class="form-group">
+                        <label for="my-input">Name</label>
+                        <input type="text" class="form-control"  name="namee" placeholder="Full Name" [(ngModel)]="name">
+                        <br>
+                        <p>Your Data: {{p.name}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-input">DOB</label>
+                        <input type="text" class="form-control" name="dob" placeholder="DD/MM/YYYY" [(ngModel)]="dob">
+                    <br>
+                        <p>Your Data: {{p.dob}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-input">Address</label>
+                        <br>
+                        <textarea name="address" style="border: 1px solid black" [(ngModel)]="address" cols="60" rows="5" placeholder="Full Address"></textarea>
+                    <br>
+                        <p>Your Data: {{p.address}}</p>
+                    </div>
+                    <div class="form-group">
+                            <label for="my-input">Phone Number</label>
+                            <input type="number" class="form-control" name="phone" placeholder="Enter your contact number" [(ngModel)]="phone">
+                            <br>
+                            <p>Your Data: {{p.phone}}</p>
+                        </div>
+                </div>
+                <div class="col-md-6">
+                        <h3 style="text-align: center">Educational Details</h3>
+                    <div class="form-group">
+                        <label for="my-input">Degree</label>
+                        <input type="text" class="form-control" name="degree" placeholder="Enter Degree" [(ngModel)]="degree">
+                    <br>
+                        <p>Your Data: {{e.degree}}</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-input">Marks</label>
+                        <input type="text" class="form-control" name="marks" placeholder="Enter CGPA"
+                            [(ngModel)]="marks">
+                    <br>
+                        <p>Your Data: {{e.marks}}</p>
+                        </div>
+                    <div class="form-group">
+                        <label for="my-input">Stream</label>
+                        <input type="text" class="form-control" name="stream" placeholder="Enter Stream" [(ngModel)]="stream">
+                    <br>
+                        <p>Your Data: {{e.stream}}</p>
+                    </div>
+                    <div class="form-group">
+                            <label for="my-input">College</label>
+                            <input type="text" class="form-control" name="college" placeholder="Enter Name of college" [(ngModel)]="college">
+                        <br>
+                        <p>Your Data: {{e.college}}</p>
+                        </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-md-3 offset-2"></div>
+            <button style="margin-bottom: 10px" class="btn btn-primary" type="submit">Submit Details</button>
+        </div>
+        </form>
+    </div>
