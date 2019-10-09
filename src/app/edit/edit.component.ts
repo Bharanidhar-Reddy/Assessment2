@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/* import { Component, OnInit } from '@angular/core';
 import { Educational} from '../educational';
 import { Personal} from '../personal';
 import { DataService } from '../data.service';
@@ -34,3 +34,4 @@ export class EditComponent implements OnInit {
     this.svc.add(this.e,this.p);
   }
 }
+ */
